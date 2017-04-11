@@ -2,7 +2,7 @@
 
 A quick docker set up for [Laravel][laravel].
 
-Includes PHP7, MySql, and nginx.
+Includes PHP7, MySql, Redis, and nginx.
 
 ## Requirements
 
@@ -25,10 +25,19 @@ DB_USERNAME=root
 DB_PASSWORD=secret
 ```
 
+You will also need to update your `.env` file with the [redis][https://redis.io/] config below.
+
+```
+CACHE_DRIVER=redis
+REDIS_HOST=127.0.0.1
+REDIS_PORT=63791
+```
+
 Once this is done run `docker-compose up`.
 
 When the image has finished building you will be able to view your laravel app at `http://0.0.0.0:8080/`.
 
 [laravel]: https://laravel.com
+[redis]: https://redis.io/
 [docker]: https://store.docker.com/editions/community/docker-ce-desktop-mac
 [docker-compose]: https://docs.docker.com/compose/install/
