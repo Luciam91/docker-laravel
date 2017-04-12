@@ -18,8 +18,8 @@ You will need to update your `.env` file to correspond with these changes.
 
 ```
 DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=33061
+DB_HOST=database
+DB_PORT=3306
 DB_DATABASE=DB_NAME
 DB_USERNAME=root
 DB_PASSWORD=secret
@@ -29,8 +29,8 @@ You will also need to update your `.env` file with the [redis][redis] config bel
 
 ```
 CACHE_DRIVER=redis
-REDIS_HOST=127.0.0.1
-REDIS_PORT=63791
+REDIS_HOST=localhost
+REDIS_PORT=6379
 ```
 
 Once this is done run `docker-compose up`.

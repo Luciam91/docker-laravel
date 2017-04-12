@@ -7,29 +7,32 @@ services:
         volumes:
             - ./:/var/www
         ports:
-            - "8080:80"
-        links:
+            - 8080:80
+        depends_on:
             - app
+
     app:
         build:
             context: ./
             dockerfile: docker/app.docker
         volumes:
             - ./:/var/www
-        links:
+        depends_on:
             - database
             - cache
         environment:
             - "DB_PORT=3306"
             - "DB_HOST=database"
+
     database:
         image: mysql:5.6
         environment:
             - "MYSQL_ROOT_PASSWORD=DB_SECRET"
             - "MYSQL_DATABASE=DB_NAME"
         ports:
-            - "33061:3306"
+            - 3306
+
     cache:
         image: redis:3.0
         ports:
-            - "63791:6379"
+            - 6379
