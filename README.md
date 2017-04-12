@@ -25,7 +25,7 @@ DB_USERNAME=root
 DB_PASSWORD=secret
 ```
 
-You will also need to update your `.env` file with the [redis][https://redis.io/] config below.
+You will also need to update your `.env` file with the [redis][redis] config below.
 
 ```
 CACHE_DRIVER=redis
