@@ -37,6 +37,11 @@ Once this is done run `docker-compose up`.
 
 When the image has finished building you will be able to view your laravel app at `http://0.0.0.0:8080/`.
 
+---
+
+*The above set up is based off this [this][source] article*
+
+[source]: https://kyleferg.com/laravel-development-with-docker/
 [laravel]: https://laravel.com
 [redis]: https://redis.io/
 [docker]: https://store.docker.com/editions/community/docker-ce-desktop-mac
